@@ -1,3 +1,9 @@
+---
+title: Impressum
+linktitle: Impressum
+icon: material/book
+---
+
 # Impressum
 
 ## Red Hat Limited
