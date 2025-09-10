@@ -1,6 +1,7 @@
 # Impressum
 
 ## Red Hat Limited
+
 6700 Cork Airport Business Park
 Kinsale Road
 Cork
@@ -16,6 +17,7 @@ Vertreten durch den Geschäftsführer: Michael O'Neill
 Anfragen zu unseren Produkten und Leistungen in Deutschland richten Sie bitte an:
 
 ## Red Hat GmbH
+
 Technopark II, Haus C
 Werner-von-Siemens-Ring 12
 85630 Grasbrunn
