@@ -1,5 +1,10 @@
 [
   {
+    "version": "workshop",
+    "title": "workshop",
+    "aliases": []
+  },
+  {
     "version": "stable",
     "title": "stable",
     "aliases": []
