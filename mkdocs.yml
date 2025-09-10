@@ -3,12 +3,12 @@ site_name: Cloud Native Robotz Hackathon - Facilitator guide
 # Project information
 # site_description: My /
 site_author: Robert Bohne
-site_url: https://cloud-native-robotz-hackathon.github.io/
+site_url: https://cloud-native-robotz-hackathon.github.io/infrastructure/
 
 # Repository
-repo_name: openshift-examples/web
+repo_name: cloud-native-robotz-hackathon/infrastructure
 repo_url: https://github.com/cloud-native-robotz-hackathon/infrastructure
-edit_uri: edit/master/content/
+edit_uri: edit/main/content/
 # Copyright
 copyright: <a href="/impressum/">Impressum</a>
 
@@ -114,9 +114,9 @@ extra_css:
 nav:
   - Tags: tags.md
 
-# not_in_nav: |
-#     /README.md
-#     /impressum.md
+not_in_nav: |
+    /README.md
+    /impressum.md
 #     /cluster-configuration/image-registry/vsphere-registry.md
 #     /cluster-configuration/monitoring/alertmanager/microsoft-teams-receiver.md
 #     /cluster-installation/windows-container/on-prem/index.md
