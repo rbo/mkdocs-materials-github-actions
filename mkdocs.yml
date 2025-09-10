@@ -44,11 +44,7 @@ extra:
     provider: mike
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/rbo
-    - icon: fontawesome/brands/x-twitter
-      link: https://twitter.com/robertbohne
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/robertbohne
+      link: http://github.com/cloud-native-robotz-hackathon
 
 extra_javascript:
   - https://viewer.diagrams.net/js/viewer-static.min.js
