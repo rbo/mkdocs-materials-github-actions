@@ -1,4 +1,4 @@
-name: Build/Publish Develop Docs 
+name: Build/Publish Facilitator Guide 
 on:
   push:
     branches:
