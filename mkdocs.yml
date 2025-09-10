@@ -1,0 +1,126 @@
+site_name: Cloud Native Robotz Hackathon - Facilitator guide
+
+# Project information
+# site_description: My /
+site_author: Robert Bohne
+site_url: https://cloud-native-robotz-hackathon.github.io/
+
+# Repository
+repo_name: openshift-examples/web
+repo_url: https://github.com/cloud-native-robotz-hackathon/infrastructure
+edit_uri: edit/master/content/
+# Copyright
+copyright: <a href="/impressum/">Impressum</a>
+
+# Configuration
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  # logo: images/desk.png
+  # favicon: images/favicon.png
+#   palette:
+#     - primary: black
+#       accent: red
+#       toggle:
+#         icon: material/lightbulb-outline
+#         name: Switch to light mode
+#     - scheme: slate
+#       primary: black
+#       accent: red
+#       toggle:
+#         icon: material/lightbulb
+#         name: Switch to dark mode
+  font:
+    text: Overpass
+    code: Overpass Mono
+  favicon: images/favicon.png
+  icon:
+    # logo: robot
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - content.code.copy
+
+# Extras
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rbo
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/robertbohne
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/robertbohne
+
+extra_javascript:
+  - https://viewer.diagrams.net/js/viewer-static.min.js
+  - javascripts/drawio-reload.js
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - pymdownx.tasklist
+  # Use --8<-- "content/cluster-lifecycle/backup/pod.yaml"
+  - pymdownx.snippets:
+      check_paths: true
+  - meta
+  - attr_list
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: false
+      type: timeago
+  - git-authors
+    #   exclude:
+    #     - kubevirt/ansible/README.md
+    #     - networking/network-policy/network-policy-demo/README.md
+  - tags:
+      tags_file: tags.md
+  - macros:
+      verbose: false
+  - glightbox
+  - drawio:
+      toolbar: false    # control if hovering on a diagram shows a toolbar for zooming or not (default: true)
+      tooltips: false   # control if tooltips will be shown (default: true)
+      edit: false       # control if edit button will be shown in the lightbox view (default: true)
+      border: 0         # increase or decrease the border / margin around your diagrams (default: 5)
+
+hooks:
+  - hooks/sha256_filter.py
+
+extra_css:
+  - assets/stylesheets/powered-by.css
+
+#  gsed -E "s/\* \[(.+)\]\((.+)\)/- \'\1\': '\2'/" docs/SUMMARY.md
+# :material-folder-plus:
+nav:
+  - Tags: tags.md
+
+# not_in_nav: |
+#     /README.md
+#     /impressum.md
+#     /cluster-configuration/image-registry/vsphere-registry.md
+#     /cluster-configuration/monitoring/alertmanager/microsoft-teams-receiver.md
+#     /cluster-installation/windows-container/on-prem/index.md
+#     /networking/sr-iov/deployment-sriov-eno4.md
+#     /networking/sr-iov/sriov.md
+
+docs_dir: content/
