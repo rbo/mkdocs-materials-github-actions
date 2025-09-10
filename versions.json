@@ -1,29 +1,7 @@
 [
   {
-    "version": "workshop",
-    "title": "workshop",
-    "aliases": []
-  },
-  {
     "version": "stable",
     "title": "stable",
     "aliases": []
-  },
-  {
-    "version": "pr-3000",
-    "title": "pr-3000",
-    "aliases": []
-  },
-  {
-    "version": "main",
-    "title": "main",
-    "aliases": []
-  },
-  {
-    "version": "0.1",
-    "title": "0.1",
-    "aliases": [
-      "latest"
-    ]
   }
 ]
