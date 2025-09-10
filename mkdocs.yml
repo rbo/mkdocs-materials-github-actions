@@ -1,4 +1,4 @@
-site_name: Cloud Native Robotz Hackathon - Facilitator guide
+site_name: Facilitator guide
 
 site_author: Robot Team
 site_url: https://cloud-native-robotz-hackathon.github.io/
@@ -95,11 +95,6 @@ plugins:
 hooks:
   - hooks/sha256_filter.py
 
-extra_css:
-  - assets/stylesheets/powered-by.css
-
-#  gsed -E "s/\* \[(.+)\]\((.+)\)/- \'\1\': '\2'/" docs/SUMMARY.md
-# :material-folder-plus:
 nav:
   - Tags: tags.md
   - Impressum: impressum.md
