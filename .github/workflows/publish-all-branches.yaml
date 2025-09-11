@@ -1,4 +1,4 @@
-name: Build/Publish Facilitator Guide 
+name: publush-all-branches
 on:
   push:
     branches:
