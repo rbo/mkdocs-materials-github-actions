@@ -1,6 +1,6 @@
 name: Build/Publish Facilitator Guide 
-#on:
-#  pull_request:
+# on:
+#   pull_request:
 on:
   check_suite:
     types: [completed]
