@@ -1,6 +1,9 @@
-name: Build/Publish Facilitator Guide 
+name: publush-all-branches
 on:
   push:
+    branches:
+      - main
+      - 'releases/**'
 permissions:
   contents: write
 jobs:
