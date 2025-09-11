@@ -1,2 +1,1 @@
 # mkdocs-materials-github-actions
-
