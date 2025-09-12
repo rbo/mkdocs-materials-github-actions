@@ -27,4 +27,4 @@ jobs:
           git config --global user.name "Docs Deploy"
           git config --global user.email "docs.deploy@example.co.uk"
       - name: Build Docs Website
-        run: mike delete --update-aliases --push pr-${{ github.event.pull_request.number }}
+        run: mike delete --push pr-${{ github.event.pull_request.number }}
