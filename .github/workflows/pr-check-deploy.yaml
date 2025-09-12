@@ -33,8 +33,6 @@ jobs:
       - uses: mshick/add-pr-comment@v2
         with:
           message: |
-            Thanks, please check 
+            Thanks, please check
               https://rbo.github.io/mkdocs-materials-github-actions/pr-${{ github.event.pull_request.number }}/
-            before merge. 
-            
-            
+            before merge.
