@@ -1,14 +1,15 @@
-name: publish-pro
-# on:
-#   pull_request:
+name: pr-close
+
 on:
-  check_suite:
-    types: [completed]
+  pull_request:
+    types:
+      - closed
 
 permissions:
   contents: write
+
 jobs:
-  deploy:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,6 +18,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: 3.12
+
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
@@ -25,4 +27,4 @@ jobs:
           git config --global user.name "Docs Deploy"
           git config --global user.email "docs.deploy@example.co.uk"
       - name: Build Docs Website
-        run: mike deploy --update-aliases --push pr-${{ github.event.pull_request.number }}
+        run: mike delete --update-aliases --push pr-${{ github.event.pull_request.number }}
