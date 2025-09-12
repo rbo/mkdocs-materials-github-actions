@@ -1,13 +1,13 @@
-name: pr
-
+name: publish (main & releases)
 on:
-  pull_request:
-
+  push:
+    branches:
+      - main
+      - 'releases/**'
 permissions:
   contents: write
-
 jobs:
-  pre-commit-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,11 +16,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: 3.12
-
-      - name: pre-commit
-        uses: pre-commit/action@v3.0.1
-        with:
-          extra_args: "--from-ref origin/main --to-ref HEAD"
+          cache: 'pip'
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
@@ -29,4 +25,4 @@ jobs:
           git config --global user.name "Docs Deploy"
           git config --global user.email "docs.deploy@example.co.uk"
       - name: Build Docs Website
-        run: mike deploy --update-aliases --push pr-${{ github.event.pull_request.number }}
+        run: mike deploy --update-aliases --push ${{ github.ref_name }}
