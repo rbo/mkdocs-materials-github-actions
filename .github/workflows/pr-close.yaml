@@ -2,7 +2,8 @@ name: pr-close
 
 on:
   pull_request:
-    types: [ closed ]
+    types: 
+      - closed
 
 permissions:
   contents: write
